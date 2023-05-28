@@ -2,9 +2,9 @@ import React from "react";
 import { v4 as uuid } from "uuid";
 import Task from "./Task";
 
-function TaskList({ taskList, handleDeleteClick }) {
+function TaskList({ tasks, handleDeleteClick }) {
   
-  const displayedList = taskList.map((task) => {
+  const displayedList = tasks.map((task) => {
     return (
       <Task handleDeleteClick={handleDeleteClick} key={uuid()} category={task.category} text={task.text}/>
     )
